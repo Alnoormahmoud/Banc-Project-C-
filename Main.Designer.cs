@@ -131,7 +131,7 @@
             this.ibPro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibPro.Location = new System.Drawing.Point(0, 531);
             this.ibPro.Name = "ibPro";
-            this.ibPro.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.ibPro.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
             this.ibPro.Size = new System.Drawing.Size(249, 69);
             this.ibPro.TabIndex = 15;
             this.ibPro.Text = "Profile";
@@ -457,7 +457,7 @@
             this.ibWithdrow.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibWithdrow.Location = new System.Drawing.Point(0, 63);
             this.ibWithdrow.Name = "ibWithdrow";
-            this.ibWithdrow.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ibWithdrow.Padding = new System.Windows.Forms.Padding(10, 0, 50, 0);
             this.ibWithdrow.Size = new System.Drawing.Size(249, 59);
             this.ibWithdrow.TabIndex = 21;
             this.ibWithdrow.Text = "Withdrow";
@@ -482,7 +482,7 @@
             this.ibDeposit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibDeposit.Location = new System.Drawing.Point(0, 0);
             this.ibDeposit.Name = "ibDeposit";
-            this.ibDeposit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ibDeposit.Padding = new System.Windows.Forms.Padding(10, 0, 50, 0);
             this.ibDeposit.Size = new System.Drawing.Size(249, 63);
             this.ibDeposit.TabIndex = 20;
             this.ibDeposit.Text = "Deposit";
@@ -507,7 +507,7 @@
             this.ibTransfare.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibTransfare.Location = new System.Drawing.Point(0, 119);
             this.ibTransfare.Name = "ibTransfare";
-            this.ibTransfare.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.ibTransfare.Padding = new System.Windows.Forms.Padding(1, 0, 50, 0);
             this.ibTransfare.Size = new System.Drawing.Size(249, 81);
             this.ibTransfare.TabIndex = 23;
             this.ibTransfare.Text = "Transfare";
@@ -532,7 +532,7 @@
             this.ibBalances.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibBalances.Location = new System.Drawing.Point(0, 200);
             this.ibBalances.Name = "ibBalances";
-            this.ibBalances.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.ibBalances.Padding = new System.Windows.Forms.Padding(1, 0, 50, 0);
             this.ibBalances.Size = new System.Drawing.Size(249, 78);
             this.ibBalances.TabIndex = 22;
             this.ibBalances.Text = "Totalt  Balances";
