@@ -12,7 +12,6 @@ namespace BanckProject
 {
     public partial class Form3 : Form
     {
-
         public Form3()
         {
             InitializeComponent();
@@ -20,19 +19,19 @@ namespace BanckProject
 
         Form4 Frm = new Form4();
          Main Frm1 = new Main();
+        TotalBalanves totalBalances = new TotalBalanves();
 
 
         private bool DateIsFull()
         {
-            if (circularProgressBar1.Value != 100)
-            {
-
-                return false;
-            }
-            else
+            if (circularProgressBar1.Value == 100)
             {
                 btnAdd.Enabled = true;
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -61,21 +60,18 @@ namespace BanckProject
 
             txtPinCode.Text = "";
             txtPinCode.Enabled = true;
-
-            radioButton1.Checked = false;
-            radioButton1.Enabled = true;
-
-
+            
             radioButton2.Checked = false;
-            radioButton2.Enabled = true;
+            radioButton1.Checked = false;  
+            radioButton1.Enabled = true;
+            radioButton2.Enabled = true;    
 
-
+ 
             pbPhoto.Image = Properties.Resources.test;
             btnSelectPhoto.Enabled = true;
 
             tt.Enabled = true;
-
-
+ 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -114,7 +110,7 @@ namespace BanckProject
             ClientData.Clients.Add(newClient);
 
             // Call the UpdateClientList method to refresh the data in Form4
-
+            totalBalances.UpdateClientList();
             Frm.UpdateClientList();
             btnAdd.Enabled = false;
             MessageBox.Show("Client Added Successfuly", "Add", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -139,15 +135,11 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtFName.Enabled = false;
+                DateIsFull();
 
             }
         }
-
-        private void txtLName_TextChanged(object sender, EventArgs e)
-        {
-            DateIsFull();
-        }
-
+ 
         private void txtLName_Validating(object sender, CancelEventArgs e)
         {
             if (txtLName.Text == "")
@@ -165,6 +157,7 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtLName.Enabled = false;
+                DateIsFull();
 
             }
         }
@@ -178,8 +171,8 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtEmail.Enabled = false;
-
-
+                DateIsFull();
+ 
 
             }
             else
@@ -209,6 +202,7 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtPinCode.Enabled = false;
+                DateIsFull();
 
             }
         }
@@ -230,6 +224,7 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtPhoneNum.Enabled = false;
+                DateIsFull();
 
             }
         }
@@ -251,10 +246,10 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtAccNumber.Enabled = false;
+                DateIsFull();
 
             }
         }
-
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -263,33 +258,8 @@ namespace BanckProject
             lblValue.Text = circularProgressBar1.Value.ToString() + "%";
 
         }
-
-        private void txtAccNumber_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            DateIsFull();
-
-        }
-
-        private void txtFName_TextChanged(object sender, EventArgs e)
-        {
-            DateIsFull();
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            DateIsFull();
-        }
-
-        private void txtPinCode_TextChanged(object sender, EventArgs e)
-        {
-            DateIsFull();
-        }
-
-        private void txtPhoneNum_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            DateIsFull();
-        }
-        private void btnSelectPhoto_Click_1(object sender, EventArgs e)
+ 
+         private void btnSelectPhoto_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Select an Image";
@@ -304,12 +274,7 @@ namespace BanckProject
                 DateIsFull();
             }
         }
-
-        private void txtAdderes_TextChanged(object sender, EventArgs e)
-        {
-            DateIsFull();
-        }
-
+ 
         private void txtAdderes_Validating(object sender, CancelEventArgs e)
         {
             if (txtAdderes.Text == "")
@@ -327,6 +292,7 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtAdderes.Enabled = false;
+                DateIsFull();
 
             }
 
@@ -342,30 +308,22 @@ namespace BanckProject
             radioButton1.Enabled = false;
             radioButton2.Enabled = false;
             lblValue.Text = circularProgressBar1.Value.ToString() + "%";
+            DateIsFull();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (radioButton2.Checked)
             {
                 circularProgressBar1.Value += 10;
             }
-            groupBox1.Text = radioButton1.Text.ToString();
+            groupBox1.Text = radioButton2.Text.ToString();
             radioButton1.Enabled = false;
             radioButton2.Enabled = false;
             lblValue.Text = circularProgressBar1.Value.ToString() + "%";
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-            // dateTimePicker2.Enabled = false;
-        }
-
-        private void txtBalance_TextChanged(object sender, EventArgs e)
-        {
             DateIsFull();
         }
-
+   
         private void txtBalance_Validating_1(object sender, CancelEventArgs e)
         {
 
@@ -384,15 +342,11 @@ namespace BanckProject
                 circularProgressBar1.Value += 10;
                 lblValue.Text = circularProgressBar1.Value.ToString() + "%";
                 txtBalance.Enabled = false;
+                DateIsFull();
 
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void tt_Tick(object sender, EventArgs e)
         {
             {
@@ -409,5 +363,6 @@ namespace BanckProject
             }
 
         }
+ 
     }
 }

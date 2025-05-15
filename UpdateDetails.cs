@@ -29,7 +29,7 @@ namespace BanckProject
             AccN = sc.AccountNumber.ToString();
             FName = sc.FirstName.ToString();
             LName = sc.LastName.ToString();
-            Balance = sc.Balance.ToString();
+            Balance = sc.Balance.ToString() + " $";
             PinCode = sc.PinCode.ToString();
             Email = sc.Email.ToString();
             Phone = sc.PhoneNumber.ToString();
@@ -62,13 +62,11 @@ namespace BanckProject
             DialogResult result = MessageBox.Show("Are You Sure You Want To Update This Cient", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                client.Balance = txtBalance.Text;
                 client.PinCode = txtPin.Text;
                 client.Email = txtEmail.Text;
                 client.Adderes = txtADderes.Text;
                 client.FirstName = txtFName.Text;
                 client.LastName = txtLName.Text;
-                client.AccountNumber = txtAccountNumber.Text;
                 client.PhoneNumber = txtPhone.Text;
                 MessageBox.Show("Client Updated Successfuly", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

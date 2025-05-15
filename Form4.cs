@@ -55,7 +55,7 @@ namespace BanckProject
                     item.SubItems.Add(client.PhoneNumber);
                     item.SubItems.Add(client.DateOfBirth);
                     item.SubItems.Add(client.Adderes);
-                    item.SubItems.Add(client.Balance); ;
+                    item.SubItems.Add(client.Balance+" $"); 
                     listView1.Items.Add(item);
                     lblClient.Text = Index.ToString() + " Client(s)";
                 }
@@ -110,7 +110,7 @@ namespace BanckProject
             {
                 foreach (Client client in ClientData.Clients)
                 {
-                    if (client.AccountNumber.ToLower() == txtSerch.Text.ToLower())
+                    if (client.AccountNumber.ToLower() == enteredAccount.ToLower())
                     {
                         foreach (ListViewItem item in listView1.Items)
                         {
@@ -137,7 +137,7 @@ namespace BanckProject
             {
                 foreach (Client client in ClientData.Clients)
                 {
-                    if (client.FirstName.ToLower() == txtSerch.Text.ToLower())
+                    if (client.FirstName.ToLower() == enteredAccount.ToLower())
                     {
                         foreach (ListViewItem item in listView1.Items)
                         {
@@ -166,7 +166,7 @@ namespace BanckProject
                     {
                         foreach (ListViewItem item in listView1.Items)
                         {
-                            if (item.SubItems[3].Text.ToLower() == client.PinCode.ToLower())
+                            if (item.SubItems[5].Text.ToLower() == client.PinCode.ToLower())
                             {
                                 item.Selected = true;
                                 listView1.Focus(); // Optional: brings focus to the list
@@ -205,5 +205,7 @@ namespace BanckProject
         {
 
         }
+
+     
     }
 }

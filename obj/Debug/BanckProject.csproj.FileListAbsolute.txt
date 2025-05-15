@@ -42,3 +42,7 @@ C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.detaillsDelete.re
 C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.Profile.resources
 C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.Update.resources
 C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.UpdateDetails.resources
+C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.DepositScreen.resources
+C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.WithdrawScreen.resources
+C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.TotalBalanves.resources
+C:\Users\Al Noor\Downloads\BanckProject\obj\Debug\BanckProject.Transfare.resources

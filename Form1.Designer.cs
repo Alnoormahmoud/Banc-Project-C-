@@ -180,7 +180,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(368, 42);
             this.txtUserName.TabIndex = 16;
-            this.txtUserName.Text = "Admin1";
             this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             this.txtUserName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtAccountNumber_MouseDown);
             this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtAccountNumber_Validating);
@@ -256,7 +255,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(368, 42);
             this.txtPassword.TabIndex = 6;
-            this.txtPassword.Text = "tes";
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 

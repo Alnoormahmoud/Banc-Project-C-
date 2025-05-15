@@ -183,6 +183,7 @@
             // 
             // txtAccountNumber
             // 
+            this.txtAccountNumber.BackColor = System.Drawing.Color.Gray;
             this.txtAccountNumber.Location = new System.Drawing.Point(303, 139);
             this.txtAccountNumber.Name = "txtAccountNumber";
             this.txtAccountNumber.ReadOnly = true;
@@ -219,6 +220,7 @@
             // 
             // txtBalance
             // 
+            this.txtBalance.BackColor = System.Drawing.Color.Gray;
             this.txtBalance.Location = new System.Drawing.Point(822, 139);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.ReadOnly = true;

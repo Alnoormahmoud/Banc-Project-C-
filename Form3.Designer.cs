@@ -75,9 +75,12 @@
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepPink;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(328, 791);
+            this.btnAdd.Location = new System.Drawing.Point(344, 789);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(145, 50);
             this.btnAdd.TabIndex = 10;
@@ -100,10 +103,8 @@
             this.txtAccNumber.RejectInputOnFirstFailure = true;
             this.txtAccNumber.Size = new System.Drawing.Size(228, 39);
             this.txtAccNumber.TabIndex = 16;
-            this.txtAccNumber.Text = "00";
             this.txtAccNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.txtAccNumber.ValidatingType = typeof(int);
-            this.txtAccNumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtAccNumber_MaskInputRejected);
             this.txtAccNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtAccNumber_Validating);
             // 
             // label3
@@ -121,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(293, 110);
+            this.label2.Location = new System.Drawing.Point(292, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(387, 44);
             this.label2.TabIndex = 17;
@@ -141,7 +142,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(748, 110);
+            this.circularProgressBar1.Location = new System.Drawing.Point(737, 150);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
@@ -181,8 +182,6 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(228, 41);
             this.txtFName.TabIndex = 20;
-            this.txtFName.Text = "Alnoor";
-            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             this.txtFName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFName_Validating);
             // 
             // txtLName
@@ -194,8 +193,6 @@
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(228, 36);
             this.txtLName.TabIndex = 26;
-            this.txtLName.Text = "mm";
-            this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
             this.txtLName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLName_Validating);
             // 
             // label6
@@ -217,8 +214,6 @@
             this.txtPinCode.Name = "txtPinCode";
             this.txtPinCode.Size = new System.Drawing.Size(298, 36);
             this.txtPinCode.TabIndex = 28;
-            this.txtPinCode.Text = "120";
-            this.txtPinCode.TextChanged += new System.EventHandler(this.txtPinCode_TextChanged);
             this.txtPinCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtPinCode_Validating);
             // 
             // label7
@@ -240,8 +235,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(298, 41);
             this.txtEmail.TabIndex = 30;
-            this.txtEmail.Text = "a.com";
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label8
@@ -274,13 +267,12 @@
             this.txtPhoneNum.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtPhoneNum.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.txtPhoneNum.Location = new System.Drawing.Point(349, 244);
+            this.txtPhoneNum.Mask = "0000000000";
             this.txtPhoneNum.Name = "txtPhoneNum";
             this.txtPhoneNum.RejectInputOnFirstFailure = true;
             this.txtPhoneNum.Size = new System.Drawing.Size(298, 39);
             this.txtPhoneNum.TabIndex = 32;
-            this.txtPhoneNum.Text = "091010922";
             this.txtPhoneNum.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
-            this.txtPhoneNum.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPhoneNum_MaskInputRejected);
             this.txtPhoneNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhoneNum_Validating);
             // 
             // lblValue
@@ -289,7 +281,7 @@
             this.lblValue.BackColor = System.Drawing.Color.Transparent;
             this.lblValue.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValue.ForeColor = System.Drawing.Color.CadetBlue;
-            this.lblValue.Location = new System.Drawing.Point(836, 342);
+            this.lblValue.Location = new System.Drawing.Point(830, 381);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(80, 44);
             this.lblValue.TabIndex = 33;
@@ -304,15 +296,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 96);
+            this.panel1.Size = new System.Drawing.Size(1037, 96);
             this.panel1.TabIndex = 35;
             // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Orchid;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.DeepPink;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Orchid;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.DeepPink;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 90;
             this.iconPictureBox1.Location = new System.Drawing.Point(12, 3);
@@ -325,7 +317,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Algerian", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Orchid;
+            this.lblTitle.ForeColor = System.Drawing.Color.DeepPink;
             this.lblTitle.Location = new System.Drawing.Point(111, 26);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(186, 31);
@@ -335,7 +327,7 @@
             // btnSelectPhoto
             // 
             this.btnSelectPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectPhoto.Location = new System.Drawing.Point(788, 688);
+            this.btnSelectPhoto.Location = new System.Drawing.Point(758, 693);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
             this.btnSelectPhoto.Size = new System.Drawing.Size(170, 50);
             this.btnSelectPhoto.TabIndex = 37;
@@ -371,12 +363,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 670);
+            this.label1.Location = new System.Drawing.Point(67, 674);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 31);
             this.label1.TabIndex = 40;
             this.label1.Text = "Gender";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtAdderes
             // 
@@ -387,8 +378,6 @@
             this.txtAdderes.Name = "txtAdderes";
             this.txtAdderes.Size = new System.Drawing.Size(228, 42);
             this.txtAdderes.TabIndex = 42;
-            this.txtAdderes.Text = "sd";
-            this.txtAdderes.TextChanged += new System.EventHandler(this.txtAdderes_TextChanged);
             this.txtAdderes.Validating += new System.ComponentModel.CancelEventHandler(this.txtAdderes_Validating);
             // 
             // label5
@@ -408,7 +397,6 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(298, 35);
             this.dateTimePicker2.TabIndex = 45;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label10
             // 
@@ -433,7 +421,7 @@
             // pbPhoto
             // 
             this.pbPhoto.Image = global::BanckProject.Properties.Resources.test;
-            this.pbPhoto.Location = new System.Drawing.Point(719, 434);
+            this.pbPhoto.Location = new System.Drawing.Point(708, 439);
             this.pbPhoto.Name = "pbPhoto";
             this.pbPhoto.Size = new System.Drawing.Size(289, 248);
             this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -459,8 +447,6 @@
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(298, 42);
             this.txtBalance.TabIndex = 48;
-            this.txtBalance.Text = "11222";
-            this.txtBalance.TextChanged += new System.EventHandler(this.txtBalance_TextChanged);
             this.txtBalance.Validating += new System.ComponentModel.CancelEventHandler(this.txtBalance_Validating_1);
             // 
             // tt
@@ -473,7 +459,7 @@
             this.AcceptButton = this.btnAdd;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1040, 884);
+            this.ClientSize = new System.Drawing.Size(1037, 884);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBalance);
             this.Controls.Add(this.label1);

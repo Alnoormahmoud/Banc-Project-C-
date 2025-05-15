@@ -45,14 +45,19 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblClient = new System.Windows.Forms.Label();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblClient = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -60,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(286, 111);
+            this.label2.Location = new System.Drawing.Point(277, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 44);
             this.label2.TabIndex = 18;
@@ -86,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 96);
+            this.panel1.Size = new System.Drawing.Size(1037, 96);
             this.panel1.TabIndex = 19;
             // 
             // iconPictureBox1
@@ -136,14 +141,14 @@
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label1.Location = new System.Drawing.Point(154, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 34);
+            this.label1.Size = new System.Drawing.Size(149, 34);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Serch By :";
+            this.label1.Text = "Find By :";
             // 
             // txtSerch
             // 
             this.txtSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerch.Location = new System.Drawing.Point(531, 191);
+            this.txtSerch.Location = new System.Drawing.Point(510, 202);
             this.txtSerch.Multiline = true;
             this.txtSerch.Name = "txtSerch";
             this.txtSerch.Size = new System.Drawing.Size(300, 48);
@@ -158,9 +163,9 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.Location = new System.Drawing.Point(823, 191);
+            this.iconButton1.Location = new System.Drawing.Point(807, 200);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(57, 50);
+            this.iconButton1.Size = new System.Drawing.Size(63, 50);
             this.iconButton1.TabIndex = 24;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -184,15 +189,17 @@
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
             this.listView1.HoverSelection = true;
             this.listView1.Location = new System.Drawing.Point(0, 350);
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(1040, 534);
+            this.listView1.Size = new System.Drawing.Size(1037, 534);
             this.listView1.TabIndex = 25;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -227,17 +234,6 @@
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader5.Width = 170;
             // 
-            // lblClient
-            // 
-            this.lblClient.AutoSize = true;
-            this.lblClient.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClient.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblClient.Location = new System.Drawing.Point(523, 111);
-            this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(241, 44);
-            this.lblClient.TabIndex = 26;
-            this.lblClient.Text = "0 Client (s)";
-            // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Pin Code";
@@ -268,12 +264,54 @@
             this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader10.Width = 170;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.Fuchsia;
+            this.contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.showInfoToolStripMenuItem});
+            this.contextMenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 100);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // showInfoToolStripMenuItem
+            // 
+            this.showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
+            this.showInfoToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.showInfoToolStripMenuItem.Text = "Show Info";
+            // 
+            // lblClient
+            // 
+            this.lblClient.AutoSize = true;
+            this.lblClient.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClient.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblClient.Location = new System.Drawing.Point(512, 111);
+            this.lblClient.Name = "lblClient";
+            this.lblClient.Size = new System.Drawing.Size(241, 44);
+            this.lblClient.TabIndex = 26;
+            this.lblClient.Text = "0 Client (s)";
+            // 
             // Form4
             // 
             this.AcceptButton = this.iconButton1;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1040, 884);
+            this.ClientSize = new System.Drawing.Size(1037, 884);
             this.Controls.Add(this.lblClient);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.iconButton1);
@@ -283,12 +321,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +356,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showInfoToolStripMenuItem;
     }
 }

@@ -52,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 96);
+            this.panel1.Size = new System.Drawing.Size(1037, 96);
             this.panel1.TabIndex = 36;
             // 
             // iconPictureBox1
@@ -85,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(320, 119);
+            this.label2.Location = new System.Drawing.Point(341, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(331, 44);
             this.label2.TabIndex = 46;
@@ -93,8 +93,8 @@
             // 
             // txtSerch
             // 
-            this.txtSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerch.Location = new System.Drawing.Point(525, 265);
+            this.txtSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSerch.Location = new System.Drawing.Point(524, 254);
             this.txtSerch.Multiline = true;
             this.txtSerch.Name = "txtSerch";
             this.txtSerch.Size = new System.Drawing.Size(300, 48);
@@ -109,9 +109,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label3.Location = new System.Drawing.Point(158, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 34);
+            this.label3.Size = new System.Drawing.Size(149, 34);
             this.label3.TabIndex = 51;
-            this.label3.Text = "Serch By :";
+            this.label3.Text = "Find By :";
             // 
             // comboBox2
             // 
@@ -137,7 +137,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.Location = new System.Drawing.Point(820, 263);
+            this.iconButton1.Location = new System.Drawing.Point(819, 252);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(57, 50);
             this.iconButton1.TabIndex = 53;
@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1040, 884);
+            this.ClientSize = new System.Drawing.Size(1037, 884);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.txtSerch);

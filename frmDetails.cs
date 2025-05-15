@@ -29,7 +29,7 @@ namespace BanckProject
          AccN= sc.AccountNumber .ToString();
          FName = sc.FirstName .ToString();
          LName = sc.LastName .ToString();
-         Balance  = sc.Balance  .ToString();
+            Balance = sc.Balance.ToString() + " $";
          PinCode = sc.PinCode  .ToString();
          Email  = sc.Email  .ToString();
          Phone = sc.PhoneNumber  .ToString();

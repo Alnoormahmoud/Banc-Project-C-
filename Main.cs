@@ -15,17 +15,17 @@ namespace BanckProject
 {
     public partial class Main : Form
     {
-         public Main()
+        public Main()
         {
             InitializeComponent();
             this.Text = string.Empty;
             this.ControlBox = false;
-            this.DoubleBuffered = true; 
-     
-          
+            this.DoubleBuffered = true;
+
+
         }
- 
-         private void CustomiseDesign()
+
+        private void CustomiseDesign()
         {
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -40,10 +40,9 @@ namespace BanckProject
             else
                 SubMName.Visible = false;
         }
- 
-        private Form activeForm = null;
 
-        private void OpenChaildForm(Form ChaildForm)
+        private Form activeForm = null;
+        public void OpenChaildForm(Form ChaildForm)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -55,17 +54,20 @@ namespace BanckProject
             panelChaildForm.Tag = ChaildForm;
             ChaildForm.BringToFront();
             ChaildForm.Show();
-         }
- 
+        }
         public void SetOtherOp()
         {
 
-             ibClientsList.BackColor = Color.Black;
+            ibClientsList.BackColor = Color.Black;
             ibAddClient.BackColor = Color.Black;
             ibLogOut.BackColor = Color.Black;
             ibPro.BackColor = Color.Black;
             ibUpdate.BackColor = Color.Black;
             ibDelete.BackColor = Color.Black;
+            ibBalances.BackColor = Color.Black;
+            ibTransfare.BackColor = Color.Black;
+            ibWithdrow.BackColor = Color.Black;
+            ibDeposit.BackColor = Color.Black;
 
             ibAddClient.ForeColor = Color.LightSeaGreen;
             ibDelete.ForeColor = Color.LightSeaGreen;
@@ -73,6 +75,10 @@ namespace BanckProject
             ibUpdate.ForeColor = Color.LightSeaGreen;
             ibLogOut.ForeColor = Color.LightSeaGreen;
             ibPro.ForeColor = Color.LightSeaGreen;
+            ibBalances.ForeColor = Color.LightSeaGreen;
+            ibTransfare.ForeColor = Color.LightSeaGreen;
+            ibWithdrow.ForeColor = Color.LightSeaGreen;
+            ibDeposit.ForeColor = Color.LightSeaGreen;
 
             ibAddClient.IconColor = Color.LightSeaGreen;
             ibClientsList.IconColor = Color.LightSeaGreen;
@@ -80,6 +86,10 @@ namespace BanckProject
             ibLogOut.IconColor = Color.LightSeaGreen;
             ibDelete.IconColor = Color.LightSeaGreen;
             ibPro.IconColor = Color.LightSeaGreen;
+            ibBalances.IconColor = Color.LightSeaGreen;
+            ibTransfare.IconColor = Color.LightSeaGreen;
+            ibWithdrow.IconColor = Color.LightSeaGreen;
+            ibDeposit.IconColor = Color.LightSeaGreen;
 
             ibAddClient.TextAlign = ContentAlignment.MiddleCenter;
             ibUpdate.TextAlign = ContentAlignment.MiddleCenter;
@@ -87,14 +97,16 @@ namespace BanckProject
             ibLogOut.TextAlign = ContentAlignment.MiddleCenter;
             ibClientsList.TextAlign = ContentAlignment.MiddleCenter;
             ibPro.TextAlign = ContentAlignment.MiddleCenter;
-         }
-
- 
+            ibBalances.TextAlign = ContentAlignment.MiddleCenter;
+            ibTransfare.TextAlign = ContentAlignment.MiddleCenter;
+            ibWithdrow.TextAlign = ContentAlignment.MiddleCenter;
+            ibDeposit.TextAlign = ContentAlignment.MiddleCenter;
+        }
         private void Main_Load(object sender, EventArgs e)
         {
             timer1.Start();
 
-           
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -104,8 +116,8 @@ namespace BanckProject
             string AmorPM = DateTime.Now.ToString("tt");
             string Hour = DateTime.Now.ToString("hh");
 
-            
-             if (AmorPM == "AM")
+
+            if (AmorPM == "AM")
             {
                 lblGreeting.Text = "Good Morning : ";
             }
@@ -125,33 +137,21 @@ namespace BanckProject
             ibClientsList.TextAlign = ContentAlignment.MiddleRight;
             ibClientsList.BackColor = panelChaildForm.BackColor;
 
-             OpenChaildForm(new Form4());
+            OpenChaildForm(new Form4());
         }
 
         private void ibCllients_Click_1(object sender, EventArgs e)
         {
             //Form3 frm3 = new Form3();
             SetOtherOp();
-            ibAddClient.ForeColor = Color.Orchid;
-            ibAddClient.IconColor = Color.Orchid;
+            ibAddClient.ForeColor = Color.DeepPink;
+            ibAddClient.IconColor = Color.DeepPink;
             ibAddClient.TextAlign = ContentAlignment.MiddleRight;
             ibAddClient.BackColor = panelChaildForm.BackColor;
 
             OpenChaildForm(new Form3());
         }
 
-        private void ibLogOut_Click_1(object sender, EventArgs e)
-        {
-            DialogResult Result = MessageBox.Show("Are You Sure You Want To LogOut", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Result == DialogResult.Yes)
-            {
-                Application.OpenForms[0].Show();
-
-                this.Close();
-            }
-        }
- 
         private void iconPictureBox3_Click(object sender, EventArgs e)
         {
             SetOtherOp();
@@ -176,37 +176,83 @@ namespace BanckProject
             OpenChaildForm(new frmDelete());
         }
 
-        private void ibPro_Click(object sender, EventArgs e)
-        {
-            SetOtherOp();
-
-            ibPro.ForeColor = Color.DeepPink;
-           ibPro.IconColor = Color.DeepPink;
-           ibPro.TextAlign = ContentAlignment.MiddleRight;
-            ibPro.BackColor = panelChaildForm.BackColor;
-
-            OpenChaildForm(new Profile());
-        }
-
         private void ibCurrency_Click(object sender, EventArgs e)
         {
             SetOtherOp();
             ibUpdate.ForeColor = Color.BlueViolet;
-           ibUpdate.IconColor = Color.BlueViolet;
-           ibUpdate.TextAlign = ContentAlignment.MiddleRight;
+            ibUpdate.IconColor = Color.BlueViolet;
+            ibUpdate.TextAlign = ContentAlignment.MiddleRight;
             ibUpdate.BackColor = panelChaildForm.BackColor;
 
             OpenChaildForm(new Update());
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void ibDeposit_Click(object sender, EventArgs e)
         {
+          SetOtherOp();
+         ibDeposit.ForeColor = Color.SaddleBrown;
+         ibDeposit.IconColor = Color.SaddleBrown;
+         ibDeposit.TextAlign = ContentAlignment.MiddleRight;
+         ibDeposit.BackColor = panelChaildForm.BackColor;
 
+            OpenChaildForm(new DepositScreen());
         }
 
-        private void iconPictureBox2_Click(object sender, EventArgs e)
+        private void ibPro_Click_1(object sender, EventArgs e)
         {
+            SetOtherOp();
 
+            ibPro.ForeColor = Color.DeepPink;
+            ibPro.IconColor = Color.DeepPink;
+            ibPro.TextAlign = ContentAlignment.MiddleRight;
+            ibPro.BackColor = panelChaildForm.BackColor;
+
+            OpenChaildForm(new Profile());
+        }
+
+        private void ibBalances_Click_1(object sender, EventArgs e)
+        {
+            SetOtherOp();
+            ibBalances.ForeColor = Color.Violet;
+            ibBalances.IconColor = Color.Violet;
+            ibBalances.TextAlign = ContentAlignment.MiddleRight;
+            ibBalances.BackColor = panelChaildForm.BackColor;
+
+            OpenChaildForm(new TotalBalanves());
+        }
+
+        private void ibTransfare_Click(object sender, EventArgs e)
+        {
+            SetOtherOp();
+            ibTransfare.ForeColor = Color.Tomato;
+            ibTransfare.IconColor = Color.Tomato;
+            ibTransfare.TextAlign = ContentAlignment.MiddleRight;
+            ibTransfare.BackColor = panelChaildForm.BackColor;
+
+            OpenChaildForm(new Transfare());
+        }
+
+        private void ibWithdrow_Click_1(object sender, EventArgs e)
+        {
+            SetOtherOp();
+            ibWithdrow.ForeColor = Color.RoyalBlue;
+            ibWithdrow.IconColor = Color.RoyalBlue;
+            ibWithdrow.TextAlign = ContentAlignment.MiddleRight;
+            ibWithdrow.BackColor = panelChaildForm.BackColor;
+
+            OpenChaildForm(new WithdrawScreen());
+        }
+
+        private void ibLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("Are You Sure You Want To LogOut", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Result == DialogResult.Yes)
+            {
+                Application.OpenForms[0].Show();
+
+                this.Close();
+            }
         }
     }
 }
